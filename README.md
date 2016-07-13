@@ -1,2 +1,1 @@
-# smallrockbigworld
-travel blog
+smallrockbigworld
