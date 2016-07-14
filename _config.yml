@@ -2,20 +2,17 @@
 #
 
 # Site settings
-title: Spectral
+title: The Long Way Around
 description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
+  Some stuff here about our travels
+owner: Kat Moon / Jack Le Riche
 first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+email: jackleriche@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://thelongwayaround.com" # the base hostname & protocol for your site
 social:
-  twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
-  linkedin-square: https://linkedin.com/in/<username>
+  twitter: https://twitter.com/jackleriche
+  github: https://github.com/jackleriche
   facebook-official: https://facebook.com/<username>
   google-plus-square: https://plus.google.com/u/0/+<username>
   #email: /contact/
