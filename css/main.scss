@@ -474,10 +474,10 @@ $baseurl: '{{ site.baseurl }}/images';
 			border: solid 2px _palette(border);
 			display: inline-block;
 			font-size: 1.35em;
-			height: calc(5em + 2px);
+			height: calc(7em + 2px);
 			line-height: 3em;
 			text-align: center;
-			width: calc(5em + 2px);
+			width: calc(7em + 2px);
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 
 			img {
