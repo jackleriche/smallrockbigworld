@@ -469,15 +469,20 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 
 		&.major {
-			@include vendor('transform', 'rotate(-45deg)');
+			
 			border-radius: 3px;
 			border: solid 2px _palette(border);
 			display: inline-block;
 			font-size: 1.35em;
-			height: calc(3em + 2px);
+			height: calc(5em + 2px);
 			line-height: 3em;
 			text-align: center;
-			width: calc(3em + 2px);
+			width: calc(5em + 2px);
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+			img {
+				width: inherit
+			}
 
 			&:before {
 				@include vendor('transform', 'rotate(45deg)');
@@ -1682,6 +1687,12 @@ $baseurl: '{{ site.baseurl }}/images';
 			background-size: cover;
 			text-align: center;
 
+			.background {
+				background: rgba(0,0,0,0.5);
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+
 			h2 {
 				font-size: 1.75em;
 				margin: 0 0 (_size(element-margin) * 0.25) 0;
@@ -1692,6 +1703,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				letter-spacing: _size(letter-spacing-alt);
 				text-transform: uppercase;
 				top: 0;
+				margin: 0;
 
 				a {
 					color: inherit;
