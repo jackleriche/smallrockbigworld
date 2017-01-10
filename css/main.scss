@@ -479,10 +479,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			text-align: center;
 			width: calc(7em + 2px);
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-
-			@include breakpoint(small) {
-				font-size: 1em;
-			}
+			
 		}
 
 		&.style1 {
