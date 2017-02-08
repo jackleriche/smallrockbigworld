@@ -588,6 +588,10 @@ $baseurl: '{{ site.baseurl }}/images';
 				&:last-child {
 					padding-right: 0 !important;
 				}
+
+				img {
+					width: inherit;
+				}
 			}
 
 			&.major {
