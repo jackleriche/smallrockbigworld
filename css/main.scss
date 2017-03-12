@@ -1404,7 +1404,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: _misc(z-index-base);
+		z-index: 100;
 
 		h1 {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
