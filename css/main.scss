@@ -2057,3 +2057,14 @@ $baseurl: '{{ site.baseurl }}/images';
 	.og-details { float: none; width: 100%; }
 	
 }
+
+.pagination {
+	
+    padding:  20px 0;
+    background-color: #21b2a6;
+    text-align: center;
+    
+}
+.pagination .page_number {
+	padding: 0 40px;
+}

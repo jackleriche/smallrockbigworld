@@ -3,54 +3,52 @@ layout: default
 title: Home
 page-class: homepage
 ---
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>{{ site.title }}</h2>
-							<p>{{ site.description | markdownify }}</p>
-							<!--<ul class="actions">-->
-							<!--	<li><a href="#" class="button special">Activate</a></li>-->
-							<!--</ul>-->
-						</div>
-						<!--<a href="#one" class="more scrolly">Learn More</a>-->
-					</section>
+<!-- Banner -->
+<section id="banner">
+	<div class="inner">
+		<h2>{{ site.title }}</h2>
+		<p>{{ site.description | markdownify }}</p>
+	</div>
+</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Enjoying travelling the long way</h2>
-								<p>We decided to try and take travelling literally by getting as far as we can without leaving the ground! Many people thought we were silly to travel Europe, Russia, Mongolia and China in February without flying. However we wanted to do something different and have a <b>big adventure!</b></p>
-								<p>"Its not about the destination, it's about the journey"</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon major style1"><img src="/images/katPic.png"></li>
-								<li><span class="icon major style2"><img src="/images/jackPic.png"></li>
-							</ul>
-						</div>
-					</section>
+<!-- One -->
+<section id="one" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Enjoying travelling the long way</h2>
+			<p>We decided to try and take travelling literally by getting as far as we can without leaving the ground! Many people thought we were silly to travel Europe, Russia, Mongolia and China in February without flying. However we wanted to do something different and have a <b>big adventure!</b></p>
+			<p>"Its not about the destination, it's about the journey"</p>
+		</header>
+		<ul class="icons major">
+			<li><span class="icon major style1"><img src="/images/katPic.png"></li>
+			<li><span class="icon major style2"><img src="/images/jackPic.png"></li>
+		</ul>
+	</div>
+</section>
 
-				<!-- Two -->
-				<section id="two"  class="wrapper style2 alt">
-					{% for post in site.posts %}
-					<section class="spotlight">
-						<div class="image"><img src="{{ post.banner }}" alt="" /></div><div class="content">
-							<h2><a href="{{ post.url }}" title="post__title">{{ post.title }}</a></h2>
-							<p><a href="{{ post.url }}" title="post__title">{{ post.blurb }}</a></p>
-						</div>
-					</section>
-					{% endfor %}
-				</section>
+<!-- Two -->
+<section id="two"  class="wrapper style2 alt">
+	{% for post in paginator.posts %}
+	<section class="spotlight">
+		<div class="image"><img src="{{ post.banner }}" alt="" /></div><div class="content">
+			<h2><a href="{{ post.url }}" title="post__title">{{ post.title }}</a></h2>
+			<p><a href="{{ post.url }}" title="post__title">{{ post.blurb }}</a></p>
+		</div>
+	</section>
+	{% endfor %}
+</section>
 
-				<!-- CTA -->
-				<!--<section id="cta" class="wrapper style4">
-					<div class="inner">
-						<header>
-							<h2>Contact Us</h2>
-							<p>Should you wish to know more about specific parts of the trip which havent been detailed, please feel free to e-mail us</p>
-						</header>
-						<ul class="actions vertical">
-							<li><a href="#" class="button fit special">Contact us</a></li>
-						</ul>
-					</div>
-				</section>-->
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
