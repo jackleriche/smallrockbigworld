@@ -7,3 +7,5 @@ gems: [jekyll-paginate]
 
 paginate: 5
 paginate_path: "page:num"
+
+description: It's not about the destination, it's about the journey

@@ -16,8 +16,50 @@ page-class: homepage
 	<div class="inner">
 		<header class="major">
 			<h2>Enjoying travelling the long way</h2>
-			<p>We decided to try and take travelling literally by getting as far as we can without leaving the ground! Many people thought we were silly to travel Europe, Russia, Mongolia and China in February without flying. However we wanted to do something different and have a <b>big adventure!</b></p>
-			<p>"Its not about the destination, it's about the journey"</p>
+
+			
+			<p id='totalDistance'>Total distance: <span></span> </p>
+			<p id='methods'> Methods used: <span></span> </p>
+			<p id='train'>Trains: <span></span> </p>
+			<p id='bus'>Buses: <span></span> </p>
+			<p id='boat'>Boats: <span></span> </p>
+			<p id='bike'>Bikes: <span></span> </p>
+			<p id='motorbike'>Motorbike: <span></span> </p>
+			<p id='plane'>Planes: <span>0</span> </p>
+			
+			
+			<script>
+
+				// grab distances from the posts.distance and add them together
+				var distance 	= 0;
+				var methods 	= 0;
+				var train 		= 0;
+				var bus 			= 0;
+				var boat 			= 0;
+				var bike 			= 0;
+				var motorbike	= 0;
+
+				{% for post in paginator.posts %}
+					distance += Number( {{ post.distance }} );
+					methods += Number( {{ post.method }} );
+					train += Number( {{ post.train }} );
+					bus += Number( {{ post.bus }} );
+					boat += Number( {{ post.boat }} );
+					bike += Number( {{ post.bike }} );
+					motorbike += Number( {{ post.motorbike }} );
+				{% endfor %}
+				
+				
+				$('#totalDistance span').text( distance );
+				$('#methods span').text( methods );
+				$('#train span').text( train );
+				$('#bus span').text( bus );
+				$('#boat span').text( boat );
+				$('#bike span').text( bike );
+				$('#motorbike span').text( motorbike );
+
+			</script>
+						
 		</header>
 		<ul class="icons major">
 			<li><span class="icon major style1"><img src="/images/katPic.png"></li>
