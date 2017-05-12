@@ -230,6 +230,9 @@ $baseurl: '{{ site.baseurl }}/images';
 						font-weight: bold;
 						font-size: 3em;
 
+						@include breakpoint(medium) {
+							font-size: 2em; 
+						}
 					}
 				}
 			}
