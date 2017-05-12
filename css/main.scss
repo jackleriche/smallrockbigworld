@@ -214,6 +214,30 @@ $baseurl: '{{ site.baseurl }}/images';
 	section, article {
 		&.special {
 			text-align: center;
+
+			& article {
+				display: block;
+				float: left;
+				width: 50%;
+				& p {
+					text-align: center;
+					font-weight: normal;
+					font-size: 24px;
+					& span {
+
+						line-height: 55px;
+						display: block;
+						font-weight: bold;
+						font-size: 3em;
+
+					}
+				}
+			}
+
+			& article.center {
+				float: none !important;
+				width: 100% !important;
+			}
 		}
 	}
 
@@ -497,7 +521,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 /* Image */
 
-	.post::after {
+	.post::after, .clear {
 		content: '';
 		display: block;
 		clear: both;
