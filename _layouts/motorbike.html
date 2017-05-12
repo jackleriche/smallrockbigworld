@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper"> 
+
+      {% include header.html %}
+
+      <article id="main">
+
+        <header style='background-image: url({{ page.banner }})'>
+          <div class="background"> 
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.blurb }}</p>
+          </div>
+        </header>
+
+        <section class="wrapper style5">
+          <div class="inner post">
+
+              <article> 
+                {{ page.googleMaps1 }}
+                <h3>{{ page.day1 }}</h3>
+                <h4>{{ page.fromTo1 }}</h4>
+                <h4>{{ page.distance1 }}</h4>
+
+                <hr />
+
+                {{ page.content1 }}
+                
+              </article>
+
+              {{ if page.content2 }}
+              
+              <article> 
+                {{ page.googleMaps2 }}
+                <h3>{{ page.day2 }}</h3>
+                <h4>{{ page.fromTo2 }}</h4>
+                <h4>{{ page.distance2 }}</h4>
+                <hr />
+                {{ page.content2 }}
+              </article>
+              
+              {{ endif }}
+
+              {{ if page.content3 }}
+              <article> 
+                {{ page.googleMaps3 }}
+                <h3>{{ page.day3 }}</h3>
+                <h4>{{ page.fromTo3 }}</h4>
+                <h4>{{ page.distance3 }}</h4>
+                <hr />
+                {{ page.content3 }}  
+              </article>
+              
+              {{ endif }}
+
+              {{ if page.content4 }}
+              
+              <article> 
+                {{ page.googleMaps4 }}
+                <h3>{{ page.day4 }}</h3>
+                <h4>{{ page.fromTo4 }}</h4>
+                <h4>{{ page.distance4 }}</h4>
+                <hr />
+                {{ page.content4 }}
+                
+              </article>
+
+              {{ endif }}
+
+              {{ if page.content5 }}
+
+              <article> 
+                {{ page.googleMaps5 }}
+                <h3>{{ page.day5 }}</h3>
+                <h4>{{ page.fromTo5 }}</h4>
+                <h4>{{ page.distance5 }}</h4>
+                <hr />
+                {{ page.content5 }}
+              </article>
+
+              {{ endif }}
+
+          </div>
+        </section>
+
+      </article>
+
+      {% include footer.html %}
+
+      {% include scripts.html %}
+
+    </div>
+
+  </body>
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90092971-1', 'auto'); 
+      ga('send', 'pageview');
+
+    </script>
+
+</html>
