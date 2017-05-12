@@ -53,7 +53,8 @@ page-class: homepage
 				var bike 			= 0;
 				var motorbike	= 0;
 
-				{% for post in paginator.posts %}
+				{% for post in site.posts %}
+
 					distance += Number( {{ post.distance }} );
 					methods += Number( {{ post.method }} );
 					train += Number( {{ post.train }} );
