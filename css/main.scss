@@ -219,20 +219,27 @@ $baseurl: '{{ site.baseurl }}/images';
 				display: block;
 				float: left;
 				width: 50%;
-				& p {
+				h4 {
+					font-size: 24px;
+					letter-spacing: 0;
+					text-transform: none;
+					color: #c8ece9 !important;
+					padding: 0;
+					margin: 0;
+					border: none;
 					text-align: center;
 					font-weight: normal;
 					font-size: 24px;
-					& span {
+				}
+				p {
 
-						line-height: 55px;
-						display: block;
-						font-weight: bold;
-						font-size: 3em;
+					font-size: 3em;
+					line-height: 55px;
+					display: block;
+					font-weight: bold;
 
-						@include breakpoint(medium) {
-							font-size: 2em; 
-						}
+					@include breakpoint(medium) {
+						font-size: 2em; 
 					}
 				}
 			}

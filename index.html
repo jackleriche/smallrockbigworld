@@ -7,7 +7,7 @@ page-class: homepage
 <section id="banner">
 	<div class="inner">
 		<h2>{{ site.title }}</h2>
-		<p>{{ site.description | markdownify }}</p>
+		<p>{{ site.description }}</p>
 	</div>
 </section>
 
@@ -18,21 +18,26 @@ page-class: homepage
 			<h2>Enjoying travelling the long way</h2>
 
 			<article>
-				<p id='totalDistance'>Distance <small>(km)</small>: <span></span> </p>
+				<h4>Distance <small>(km)</small>:</h4>
+				<p id='totalDistance'></p>
 			</article>
 			<article>
-				<p id='boat'>Boats: <span></span> </p>
+				<h4>Boats:</h4>
+				<p id='boat'></p>
 			</article>
 			<div class='clear'></div>
 			<article>
-				<p id='train'>Trains: <span></span> </p>
+				<h4>Trains:</h4>
+				<p id='train'></p>
 			</article>
 			<article>
-				<p id='bus'>Buses: <span></span> </p>
+				<h4>Buses:</h4>
+				<p id='bus'></p>
 			</article>
 			<div class='clear'></div>
 			<article class='center'>
-				<p id='plane'>Planes: <span>0</span> </p>	
+				<h4>Planes:</h4>
+				<p id='plane'>0</p>	
 			</article>
 <!--			
 			<p id='boat'>Boats: <span></span> </p>
@@ -65,26 +70,26 @@ page-class: homepage
 				{% endfor %}
 				
 				
-				$('#totalDistance span').text( distance );
-				$('#methods span').text( methods );
-				$('#train span').text( train );
-				$('#bus span').text( bus );
-				$('#boat span').text( boat );
-				$('#bike span').text( bike );
-				$('#motorbike span').text( motorbike );
+				$('#totalDistance').text( distance );
+				$('#methods').text( methods );
+				$('#train').text( train );
+				$('#bus').text( bus );
+				$('#boat').text( boat );
+				$('#bike').text( bike );
+				$('#motorbike').text( motorbike );
 
-			</script>
+			</script> 
 		</header>
 		<div class='clear'> </div>
 		<ul class="icons major">
-			<li><span class="icon major style1"><img src="/images/katPic.png"></li>
-			<li><span class="icon major style2"><img src="/images/jackPic.png"></li>
+			<li><span class="icon major style1"><img src="/images/katPic.png" alt='Katherine mug shot' /></span></li>
+			<li><span class="icon major style2"><img src="/images/jackPic.png" alt='Jack mug shot' /></span></li>
 		</ul>
 	</div>
 </section>
 
 <!-- Two -->
-<section id="two"  class="wrapper style2 alt">
+<div id="two"  class="wrapper style2 alt">
 	{% for post in paginator.posts %}
 	<section class="spotlight">
 		<div class="image"><img src="{{ post.banner }}" alt="" /></div><div class="content">
@@ -93,7 +98,7 @@ page-class: homepage
 		</div>
 	</section>
 	{% endfor %}
-</section>
+</div>
 
 <!-- Pagination links -->
 <div class="pagination">
