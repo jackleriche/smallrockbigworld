@@ -1,11 +1,18 @@
 title: The Long Way Around
 permalink: /:year/:month/:title
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 paginate: 5
 paginate_path: "page:num"
 
 description: It's not about the destination, it's about the journey
 
-include: ['images']
+exclude: [node_modules, README.md, CNAME, .gitignore, .git, _sass ]
+keep_files: [images]
+
+# values used on index page
+distance: 24385
+boats: 8
+trains: 23
+buses: 11

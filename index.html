@@ -2,6 +2,8 @@
 layout: default
 title: The long way around. Overland travel and personal online journal 
 page-class: homepage
+
+distance: 34927-945
 ---
 <!-- Banner -->
 <section id="banner">
@@ -15,70 +17,29 @@ page-class: homepage
 <section id="one" class="wrapper style1 special">
 	<div class="inner">
 		<header class="major">
-			<h2>Enjoying travelling the long way</h2>
-
+			<h2>Enjoying travelling the long way</h2> 
 			<article>
 				<h4>Distance <small>(km)</small>:</h4>
-				<p id='totalDistance'></p>
+				<p id='totalDistance'>{{ site.distance }}</p>
 			</article>
 			<article>
 				<h4>Boats:</h4>
-				<p id='boat'></p>
+				<p id='boat'>{{ site.boats }}</p>
 			</article>
 			<div class='clear'></div>
 			<article>
 				<h4>Trains:</h4>
-				<p id='train'></p>
+				<p id='train'>{{ site.trains }}</p>
 			</article>
 			<article>
 				<h4>Buses:</h4>
-				<p id='bus'></p>
+				<p id='bus'>{{ site.buses }}</p>
 			</article>
 			<div class='clear'></div>
 			<article class='center'>
 				<h4>Planes:</h4>
 				<p id='plane'>0</p>	
 			</article>
-<!--			
-			<p id='boat'>Boats: <span></span> </p>
-			<p id='bike'>Bikes: <span></span> </p>
-			
-			<p id='bus'>Buses: <span></span> </p>
--->
-
-			
-			<script>
-
-				// grab distances from the posts.distance and add them together
-				var distance 	= 0;
-				var methods 	= 0;
-				var train 		= 0;
-				var bus 			= 0;
-				var boat 			= 0;
-				var bike 			= 0;
-				var motorbike	= 0;
-
-				{% for post in site.posts %}
-
-					distance += Number( {{ post.distance }} );
-					methods += Number( {{ post.method }} );
-					train += Number( {{ post.train }} );
-					bus += Number( {{ post.bus }} );
-					boat += Number( {{ post.boat }} );
-					bike += Number( {{ post.bike }} );
-					motorbike += Number( {{ post.motorbike }} );
-				{% endfor %}
-				
-				
-				$('#totalDistance').text( distance );
-				$('#methods').text( methods );
-				$('#train').text( train );
-				$('#bus').text( bus );
-				$('#boat').text( boat );
-				$('#bike').text( bike );
-				$('#motorbike').text( motorbike );
-
-			</script> 
 		</header>
 		<div class='clear'> </div>
 		<ul class="icons major">
