@@ -1249,7 +1249,8 @@ section.special, article.special {
       font-size: 3em;
       line-height: 55px;
       display: block;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-bottom: 1em }
       @media screen and (max-width: 980px) {
         section.special article p, article.special article p {
           font-size: 2em; } }
