@@ -12,7 +12,7 @@ exclude: [node_modules, README.md, CNAME, .gitignore, .git, _sass ]
 keep_files: [images]
 
 # values used on index page
-distance: 29577
+distance: 30957
 boats: 10
 trains: 27
-buses: 24
+buses: 26
