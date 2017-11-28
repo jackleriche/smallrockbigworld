@@ -13,6 +13,6 @@ keep_files: [images]
 
 # values used on index page
 distance: 37038
-boats: 16 
+boats: 17 
 trains: 32
 buses: 47
